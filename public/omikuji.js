@@ -20,3 +20,6 @@ window.onload = async function () {
 document.getElementById("jump").onclick = function () {
   window.location.href = "review.html";
 };
+document.getElementById("shuffle").onclick = function () {
+  location.reload();
+};
