@@ -28,7 +28,7 @@ import { serveAPI } from "https://js.sabae.cc/wsutil.js";
 import WebPush from "./WebPush.js";
 import { UUID } from "https://code4sabae.github.io/js/UUID.js";
 
-await Deno.mkdir("data/subscription", { recursive: true });
+// await Deno.mkdir("data/subscription", { recursive: true });
 
 serveAPI("/api/", async (param, req, path, conninfo) => {
   if (path == "/api/subscribe") {
