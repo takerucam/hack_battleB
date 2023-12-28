@@ -5,10 +5,14 @@ function getRandomInt(min, max) {
 }
 
 window.onload = async function () {
-  let mode = 1;
-  if (!mode) {
+  const current_mode = await fetch("https://hackbattle-b.onrender.com/getMode");
+  const reqJson = await current_mode.json();
+  mode = await reqJson.mode;
+  console.log(mode);
+  if (mode == "0") {
     window.location.replace("input.html");
   }
+
   const resJson = await fetch("https://hackbattle-b.onrender.com/getTitle");
   let titles = await resJson.json();
   console.log(titles);
