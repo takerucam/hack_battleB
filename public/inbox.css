@@ -1,0 +1,22 @@
+section {
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    margin: 20px;
+}
+
+h2{
+    text-align:left;
+    font-weight: bold;
+    font-size: large;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+
+p{
+    text-align:left;
+    border-bottom: 1px solid #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.8;
+
+}

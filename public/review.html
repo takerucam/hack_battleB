@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
 
-    <title>Input</title>
+    <title>Review</title>
   </head>
   <body>
     <div class="container">
@@ -18,11 +18,11 @@
         <section class="section">
           <div class="columns is-vcentered">
             <div class="column">
-              <h1 class="title">ここに入力</h1>
+              <h1 class="title">感想を入力</h1>
             </div>
             <div class="column">
               <textarea
-                id="form" 
+                id="form"
                 class="textarea"
                 placeholder="ここに入力"
                 required
@@ -30,7 +30,20 @@
               ></textarea>
             </div>
             <div class="column has-text-right">
-              <button id="send" class="button">送信</button>
+              <!-- <div>
+                <form
+                  action="test.html"
+                  method="post"
+                  enctype="multipart/form-data"
+                >
+                  <div>
+                    <input type="file" name="test" />
+                  </div>
+                </form>
+              </div> -->
+              <form action="inbox.html">
+                <button id="send" class="button">送信</button>
+              </form>
             </div>
             <div id="message"></div>
           </div>
@@ -39,5 +52,5 @@
       <footer></footer>
     </div>
   </body>
-  <script src="input.js"></script>
+  <!-- <script src="input.js"></script> -->
 </html>

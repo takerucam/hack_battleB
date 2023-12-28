@@ -1,18 +1,25 @@
-header {
-  height: 20vh;
-  background-color: #cc0000;
-}
-
-footer {
-  height: 20vh;
-  background-color: #c99c33;
+.box1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
 }
 
 .box2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15em;
   padding: 1em 1.5em;
   margin: 2em 0;
   border: double 4px #b22222; /*線*/
 }
+
+.footer {
+  height: 20vh;
+  background-color: #c99c33;
+}
+
 .box2 p {
   margin: 0;
   padding: 0;

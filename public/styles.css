@@ -1,4 +1,18 @@
 body {
-	text-align: center;
-	background: skyblue;
+  text-align: center;
+  background: white;
+}
+
+header {
+  height: 10vh;
+  background-color: #cc0000;
+}
+
+main {
+  height: 80vh;
+}
+
+footer {
+  height: 10vh;
+  background-color: #c99c33;
 }
