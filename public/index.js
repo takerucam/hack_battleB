@@ -1,7 +1,12 @@
 // 遷移する先の画面, APIで取得
-let mode = 0;
-if (mode) {
-  window.location.replace("input.html");
-} else {
-  window.location.replace("omikuji.html");
-}
+window.onload = async function () {
+  const current_mode = await fetch("https://hackbattle-b.onrender.com/getMode");
+  const reqJson = await current_mode.json();
+  mode = reqJson.mode;
+  console.log(mode);
+  if (mode == "0") {
+    window.location.replace("input.html");
+  } else {
+    window.location.replace("omikuji.html");
+  }
+};
