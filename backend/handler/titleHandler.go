@@ -34,6 +34,13 @@ func (h *TitleHandler) GetTitle(c *gin.Context) {
 	c.JSON(http.StatusOK, titlesArray)
 }
 
+func (h *TitleHandler) ResetTitle(c *gin.Context) {
+	h.Titles = []string{"バンジージャンプ", "蹴鞠", "書き初め"}
+	c.JSON(http.StatusOK, gin.H{
+		"Status": "OK",
+	})
+}
+
 func (h *TitleHandler) SendTitle(c *gin.Context) {
 	title := c.Query("title")
 	h.Titles = append(h.Titles, title)

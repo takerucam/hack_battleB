@@ -20,6 +20,7 @@ func main() {
 	r.GET("/clear", t.ClearTitle)
 	r.GET("/getMode", m.GetMode)
 	r.GET("/getTitle", t.GetTitle)
+	r.GET("/reset", t.ResetTitle)
 	r.GET("/setMode", m.SetMode)
 	r.GET("/sendTitle", t.SendTitle)
 
