@@ -8,29 +8,33 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Input</title>
+    <!-- <link rel="stylesheet" href="omikuji.css" /> -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div style="height: 20vh; background-color: #cc0000"></div>
-    <div style="height: 60vh">
-      <section class="section">
-        <div class="columns is-vcentered">
-          <div class="column">
-            <h1 class="title">ここに入力</h1>
+    <div class="container">
+      <header></header>
+      <main>
+        <section class="section">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <h1 class="title">ここに入力</h1>
+            </div>
+            <div class="column">
+              <textarea
+                class="textarea"
+                placeholder="ここに入力"
+                required
+                size="100"
+              ></textarea>
+            </div>
+            <div class="column has-text-right">
+              <button id="send" class="button">送信</button>
+            </div>
           </div>
-          <div class="column">
-            <textarea
-              class="textarea"
-              placeholder="ここに入力"
-              required
-              size="100"
-            ></textarea>
-          </div>
-          <div class="column has-text-right">
-            <button id="send" class="button">送信</button>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
+      <footer></footer>
     </div>
-    <div style="height: 20vh; background-color: #c99c33"></div>
   </body>
 </html>
