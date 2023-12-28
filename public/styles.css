@@ -3,20 +3,20 @@ body {
   background: white;
 }
 
-.container{
-	/* height: 1000px; */
+.container {
+  /* height: 1000px; */
 }
 
 header {
-  height: 20vh;
+  height: 10vh;
   background-color: #cc0000;
 }
 
 main {
-  height: 60vh;
+  height: 80vh;
 }
 
 footer {
-  height: 20vh;
+  height: 10vh;
   background-color: #c99c33;
 }
