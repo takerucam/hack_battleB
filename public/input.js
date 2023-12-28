@@ -7,5 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sendButton.addEventListener('click', () => {
         count++;
         message.textContent = `送信しました！${count}件目`;
+        document.getElementById('form').value = '';
     });
 });
