@@ -26,8 +26,17 @@
       </div>
     </section>
   </body>
-  <script>
+  <script type="module">
+    import { WebPush } from "./WebPush.js";
+
+    let inuuid;
     window.onload = async () => {
+      let uuid = WebPush.getID();
+      if (uuid) {
+        inuuid = uuid;
+      }
+
+      // console.log(uuid);
       // const current_mode = await fetch("/getmode");
       // if (current_mode == 0) {
       // }
@@ -38,11 +47,24 @@
       document.getElementById("input").disabled = true;
       document.getElementById("omikuji").disabled = false;
     };
-    document.getElementById("omikuji").onclick = function () {
+    document.getElementById("omikuji").onclick = async () => {
       // const response = await fetch("/setmode?mode=omikuji");
       document.getElementById("input").disabled = false;
       document.getElementById("omikuji").disabled = true;
+
+      uuid = await WebPush.subscribe();
+      console.log("uuid ", uuid);
+
+      const data = {
+        title: "WebPush test",
+        body: "WebPush for Deno に関するブログです",
+        url: "https://fukuno.jig.jp/4171",
+        timeout: 5000, // 通知を消すまでの長さ msec （デフォルト0:消さない）
+        delay: 1000, // 表示するまでの時間 msec（デフォルト0）
+      };
+      console.log(await WebPush.push(data));
     };
+
     document.getElementById("delete").onclick = function () {
       // const response = await fetch("/delete");
     };
