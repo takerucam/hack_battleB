@@ -3,7 +3,7 @@ let count = 0;
 window.onload = async function () {
   const current_mode = await fetch("https://hackbattle-b.onrender.com/getMode");
   const reqJson = await current_mode.json();
-  let mode = await reqJson.mode;
+  let mode = reqJson.mode;
   console.log(mode);
   if (mode == "0") {
     return;
