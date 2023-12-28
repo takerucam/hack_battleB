@@ -1,11 +1,20 @@
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+
 window.onload = async function () {
   let mode = 1;
   if (!mode) {
     window.location.replace("input.html");
   }
-  // let text = document.getElementById("text");
-  // const json = await fetch("/getFT");
-  // let target = Math.random();
+  const resJson = await fetch("https://hackbattle-b.onrender.com/getTitle");
+  let titles = await resJson.json();
+  console.log(titles);
+
+  document.getElementById("answer").textContent =
+    titles[getRandomInt(0, titles.length)].title;
 };
 
 document.getElementById("jump").onclick = function () {
