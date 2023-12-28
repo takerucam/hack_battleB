@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Review</title>
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <main>
+        <section class="section">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <h1 class="title">感想を入力</h1>
+            </div>
+            <div class="column">
+              <textarea
+                id="form"
+                class="textarea"
+                placeholder="ここに入力"
+                required
+                size="100"
+              ></textarea>
+            </div>
+            <div class="column has-text-right">
+              <!-- <div>
+                <form
+                  action="test.html"
+                  method="post"
+                  enctype="multipart/form-data"
+                >
+                  <div>
+                    <input type="file" name="test" />
+                  </div>
+                </form>
+              </div> -->
+
+              <button id="send" class="button">送信</button>
+            </div>
+            <div id="message"></div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+  <!-- <script src="input.js"></script> -->
+</html>
