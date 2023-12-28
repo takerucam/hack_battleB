@@ -2,8 +2,35 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Input</title>
   </head>
-  <body></body>
+  <body>
+    <div style="height: 20vh; background-color: #cc0000"></div>
+    <div style="height: 60vh">
+      <section class="section">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h1 class="title">ここに入力</h1>
+          </div>
+          <div class="column">
+            <textarea
+              class="textarea"
+              placeholder="ここに入力"
+              required
+              size="100"
+            ></textarea>
+          </div>
+          <div class="column has-text-right">
+            <button id="send" class="button">送信</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div style="height: 20vh; background-color: #c99c33"></div>
+  </body>
 </html>
